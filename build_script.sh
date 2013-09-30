@@ -2,6 +2,8 @@
 set -e # Exit immediately when something break
 
 pushd /root &> /dev/null
+setenforce 0
+
 yum install -y puppet facter tar bind
 
 # Generate the TSIG Key
